@@ -51,13 +51,11 @@ class UserController
     }
 
     public function edit($id)
-{
-    $model = new UserModel('', '', '');
-    $user = $model->getUserById($id);
+    {
+        $model = new UserModel('', '', '');
+        $user = $model->getUserById($id);
 
-    $view = new UserView();
-    $view->renderEditForm($user); // novo método na view
-}
-
-
+        $view = new UserView();
+        $view->renderEditForm($user); // novo método na view
+    }
 }
