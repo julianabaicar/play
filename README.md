@@ -9,10 +9,7 @@ play/
 │   ├── first/ arquivo unico php e html com formulario e exibição de dados em tela
 │   ├── second/ separação de lógica e apresentação
 │   └── third/ estrutura MVC simples
-│   └── fourth/ aplicação da estrutura no exemplo inicial de formulario de cadastro com banco de dados
-│   └── fifth/ laravel
-│   └── sixth/ autenticação e testes
-│   └── seventh/ pipelines
+│   └── fourth/ aplicação da estrutura no exemplo inicial de CRUD de formulario de cadastro com conexão com o banco de dados
 │   └── img/
 ├── README.md
 ```
