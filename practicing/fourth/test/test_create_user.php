@@ -14,8 +14,8 @@ function assertContains($needle, $haystack, $message) {
 
 function testUserRegistrationFlow() {
     // Simula dados enviados via formulário
-    $_POST['nome'] = 'Juliana';
-    $_POST['email'] = 'juliana@email.com';
+    $_POST['nome'] = 'Maria Antonia';
+    $_POST['email'] = 'maria@email.com';
     $_POST['telefone'] = '41999999999';
 
     // Cria instância do controller
@@ -27,8 +27,8 @@ function testUserRegistrationFlow() {
     $output = ob_get_clean();
 
     // Verifica se os dados aparecem na saída
-    assertContains('Juliana', $output, "Nome deve aparecer na resposta");
-    assertContains('juliana@email.com', $output, "Email deve aparecer na resposta");
+    assertContains('Maria Antonia', $output, "Nome deve aparecer na resposta");
+    assertContains('maria@email.com', $output, "Email deve aparecer na resposta");
     assertContains('41999999999', $output, "Telefone deve aparecer na resposta");
 
     echo "✅ Teste de integração do cadastro passou!\n";
