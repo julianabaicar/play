@@ -1,0 +1,15 @@
+    <h1>Edição de Usuário</h1>
+    <form method="post" action="index.php?action=update">
+        <input type="hidden" name="id" value="<?= $user['id'] ?>">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="nome" value="<?= htmlspecialchars($user['nome']) ?>">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="<?= htmlspecialchars($user['email']) ?>">
+        <br>
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" value="<?= htmlspecialchars($user['telefone']) ?>">
+        <br>
+        <input type="submit" value="Salvar">
+        <a href="index.php?action=index"><button type="button">Cancelar</button></a>
+    </form>
