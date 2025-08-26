@@ -9,13 +9,12 @@ class UserController
     public function index()
     {
         // responsabilidade: carregar a tela inicial com botão e lista
-
         $model = new UserModel('', '', '');
         $users = $model->listAllUsers();
 
         $view = new UserView();
-        $view->index();            // primeiro exibe o botão de criar usuário
-        $view->renderList($users); // depois renderiza a lista de usuários
+        $view->index();
+        $view->renderList($users);
     }
 
     public function create()
@@ -33,7 +32,7 @@ class UserController
         $telefone = $_POST['telefone'] ?? '';
 
         $model = new UserModel($nome, $email, $telefone);
-        $id = $model->saveUser(); // grava no banco
+        $id = $model->saveUser();
         
         $view = new UserView();
         $view->render(
@@ -41,7 +40,6 @@ class UserController
             $model->get_email(),
             $model->get_telefone()
         );
-
     }
 
     public function list()
@@ -71,6 +69,6 @@ class UserController
         $user = $model->getUserById($id);
 
         $view = new UserView();
-        $view->renderEditForm($user); // novo método na view
+        $view->renderEditForm($user);
     }
 }
