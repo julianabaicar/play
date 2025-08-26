@@ -1,6 +1,8 @@
 # Play: Remembering PHP programming
 > Uma jornada de volta aos conceitos fundamentais de PHP
 
+> PHP puro
+
 ### Organização do projeto
 
 ```bash
@@ -10,6 +12,7 @@ play/
 │   ├── second/ separação de lógica e apresentação
 │   └── third/ estrutura MVC simples
 │   └── fourth/ aplicação da estrutura no exemplo inicial de CRUD de formulario de cadastro com conexão com o banco de dados
+│   └── fourth-refactored/ refatoração e melhorias no código seguindo SOLID
 │   └── img/
 ├── README.md
 ```

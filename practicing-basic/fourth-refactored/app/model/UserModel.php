@@ -3,6 +3,8 @@ require_once __DIR__ . '/../../db/ConnectionDB.php';
 
 class UserModel
 {
+    // responsabilidade única da classe: gerenciar os dados do usuário
+
     public $id;
     private $nome;
     private $email;
@@ -20,6 +22,7 @@ class UserModel
 
     public function saveUser()
     {
+        // Implementação do método para salvar o usuário no banco de dados
         try {
             $pdo = ConnectionDB::getConexao();
             $sql = "INSERT INTO usuarios (nome, email, telefone) VALUES (:nome, :email, :telefone)";
@@ -37,6 +40,7 @@ class UserModel
 
     public function listAllUsers()
     {
+        // Implementação do método para listar todos os usuários
         try {
             $pdo = ConnectionDB::getConexao();
             $sql = "SELECT idUsuario AS id, nome, email, telefone FROM usuarios";
@@ -51,6 +55,7 @@ class UserModel
 
     public  function deleteUser($id)
     {
+        // Implementação do método para deletar um usuário
         try {
             $pdo = ConnectionDB::getConexao();
             $sql = "DELETE FROM usuarios WHERE idUsuario = :id";
@@ -64,6 +69,7 @@ class UserModel
 
     public function getUserById($id)
     {
+        // Implementação do método para buscar um usuário pelo ID
         try {
             $pdo = ConnectionDB::getConexao();
             $sql = "SELECT idUsuario AS id, nome, email, telefone FROM usuarios WHERE idUsuario = :id";
@@ -79,6 +85,7 @@ class UserModel
 
     public function updateUser($id, $nome, $email, $telefone)
     {
+        // Implementação do método para atualizar um usuário
         try {
             $pdo = ConnectionDB::getConexao();
             $sql = "UPDATE usuarios SET nome = :nome, email = :email, telefone = :telefone WHERE idUsuario = :id";
